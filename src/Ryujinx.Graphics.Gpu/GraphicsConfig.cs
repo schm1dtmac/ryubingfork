@@ -27,7 +27,7 @@ namespace Ryujinx.Graphics.Gpu
         /// processing commands almost instantly, instead of using the host timer.
         /// This can avoid lower resolution on some games when GPU performance is poor.
         /// </summary>
-        public static bool FastGpuTime = true;
+        public static bool FastGpuTime = false;
 
         /// <summary>
         /// Enables or disables fast 2d engine texture copies entirely on CPU when possible.
