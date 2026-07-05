@@ -2,6 +2,7 @@ name: Build job
 
 on:
   workflow_call:
+  workflow_dispatch:
 
 env:
   POWERSHELL_TELEMETRY_OPTOUT: 1
@@ -164,4 +165,3 @@ jobs:
         with:
           name: ryujinx-${{ matrix.configuration }}-${{ env.RYUJINX_BASE_VERSION }}+${{ steps.git_short_hash.outputs.result }}-macos_universal
           path: "publish/*.tar.gz"
-        if: github.event_name == 'pull_request'
